@@ -1,5 +1,5 @@
 = simple_form_for(@job, html: {class: 'form-horizonta;'}) do |f|
-	= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Chose a category" }
+	= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Chose a category" }, input_html: { class: "dropdown-toggle" }
 	= f.input :title, label: "Job Title"
 	= f.input :description, label: "Your Description"
 	= f.input :company, label: "Your Company"

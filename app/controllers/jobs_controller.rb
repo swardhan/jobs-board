@@ -20,7 +20,9 @@ class JobsController < ApplicationController
 	end
 
 	def create
+		print jobs_params
 		@job = Job.new(jobs_params)
+		print @job
 
 		if @job.save
 			redirect_to @job
